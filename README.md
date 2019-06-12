@@ -1,4 +1,4 @@
-# Metabolon
+# Metabolon RSS Feed
 Simple RSS Feed activity detector.
 
 Function parameters include:
