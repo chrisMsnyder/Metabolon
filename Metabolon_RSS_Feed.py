@@ -42,6 +42,11 @@ def RSS_Feed(company_dict, num_days):
         for url in company_dict[company]:
             feed = feedparser.parse(url)
 
+            if len(feed.entries) == 0:
+                print("No entries found under RSS feed \'" + str(url) + "\'")
+                found = True
+                continue
+
             #iterate over each entry within the rss feed url
             for f in feed.entries:
                 date = f.updated
